@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyst Portfolio - Soccer Analytics & Lineup Templates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .soccer-field {
+            background: linear-gradient(90deg, #2d5a27 0%, #4a7c59 50%, #2d5a27 100%);
+            position: relative;
+        }
+        .field-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(to right, rgba(255,255,255,0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255,255,255,0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-gray-800">⚽ DataAnalyst</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">About</a>
+                    <a href="#projects" class="text-gray-600 hover:text-blue-600 transition duration-300">Projects</a>
+                    <a href="#lineup-templates" class="text-gray-600 hover:text-blue-600 transition duration-300">Lineup Templates</a>
+                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white pt-20">
+        <div class="max-w-6xl mx-auto px-4 py-20">
+            <div class="text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">Data Analyst & Soccer Strategist</h1>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">Transforming data into insights, creating winning formations</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('projects')" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">View My Work</button>
+                    <button onclick="scrollToSection('lineup-templates')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Soccer Templates</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Me</h2>
+                <p class="text-xl text-gray-600">Where data science meets the beautiful game</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Professional Background</h3>
+                    <p class="text-gray-600 mb-6">As a passionate data analyst, I specialize in extracting meaningful insights from complex datasets. My expertise spans statistical analysis, data visualization, and predictive modeling.</p>
+                    <p class="text-gray-600 mb-6">My love for soccer has led me to combine my analytical skills with tactical understanding, creating innovative lineup templates and formation analysis tools that help teams optimize their performance.</p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">SQL</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Tableau</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">R</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Soccer Analytics</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Formation Design</span>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">Key Achievements</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">⚡</span> 5+ years in data analysis</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">📊</span> 50+ successful projects delivered</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">⚽</span> 20+ soccer lineup templates created</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">🏆</span> Helped 3 local teams improve performance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600">Data-driven solutions and soccer analytics</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                        <span class="text-white text-6xl">📊</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sales Performance Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Interactive dashboard analyzing sales trends and customer behavior patterns using Python and Tableau.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Python</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Tableau</span>
+                        </div>
+                        <button class="text-blue-600 hover:text-blue-800 font-semibold">View Project →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">⚽</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Player Performance Analytics</h3>
+                        <p class="text-gray-600 mb-4">Statistical analysis of player performance metrics to identify key performance indicators and improvement areas.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">R</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Sports Analytics</span>
+                        </div>
+                        <button class="text-blue-600 hover:text-blue-800 font-semibold">View Project →</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                        <span class="text-white text-6xl">🎯</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Predictive Modeling Suite</h3>
+                        <p class="text-gray-600 mb-4">Machine learning models for predicting customer churn and market trends with 85% accuracy.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Machine Learning</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Python</span>
+                        </div>
+                        <button class="text-blue-600 hover:text-blue-800 font-semibold">View Project →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lineup Templates Section -->
+    <section id="lineup-templates" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Soccer Lineup Templates</h2>
+                <p class="text-xl text-gray-600">Professional formation templates for tactical analysis</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 card-hover">
+                    <div class="soccer-field h-64 rounded-lg mb-4 relative overflow-hidden">
+                        <div class="field-lines"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-4">
+                            <!-- 4-3-3 Formation -->
+                            <div class="flex justify-center">
+                                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">GK</div>
+                            </div>
+                            <div class="flex justify-between px-4">
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-center space-x-8">
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between px-8">
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-blue-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4-3-3 Formation</h3>
+                    <p class="text-gray-600 mb-4">Attacking formation with wide wingers and strong midfield presence.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Download Template</button>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 card-hover">
+                    <div class="soccer-field h-64 rounded-lg mb-4 relative overflow-hidden">
+                        <div class="field-lines"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-4">
+                            <!-- 4-4-2 Formation -->
+                            <div class="flex justify-center">
+                                <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold">GK</div>
+                            </div>
+                            <div class="flex justify-between px-4">
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between px-4">
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-center space-x-12">
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-red-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4-4-2 Formation</h3>
+                    <p class="text-gray-600 mb-4">Classic balanced formation with solid midfield and two strikers.</p>
+                    <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">Download Template</button>
+                </div>
+
+                <div class="bg-white border-2 border-gray-200 rounded-lg p-6 card-hover">
+                    <div class="soccer-field h-64 rounded-lg mb-4 relative overflow-hidden">
+                        <div class="field-lines"></div>
+                        <div class="absolute inset-0 flex flex-col justify-between p-4">
+                            <!-- 3-5-2 Formation -->
+                            <div class="flex justify-center">
+                                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold">GK</div>
+                            </div>
+                            <div class="flex justify-center space-x-8">
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-between px-2">
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                            </div>
+                            <div class="flex justify-center space-x-12">
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                                <div class="w-6 h-6 bg-green-500 rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">3-5-2 Formation</h3>
+                    <p class="text-gray-600 mb-4">Midfield-heavy formation with attacking wing-backs.</p>
+                    <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300">Download Template</button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button class="bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-900 transition duration-300">View All Templates (12+)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Let's Work Together</h2>
+                <p class="text-xl text-gray-300">Ready to turn your data into actionable insights?</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-4">📧</span>
+                            <span>your.email@example.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-4">📱</span>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-4">💼</span>
+                            <span>LinkedIn: /in/yourprofile</span>
+                        </div>
+                        <div class="flex items-center">
+                            <span class="text-blue-400 mr-4">🐙</span>
+                            <span>GitHub: /yourusername</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-700 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold mb-4">Send a Message</h4>
+                    <p class="text-gray-300 text-sm mb-4">Demo Contact Form - Not functional</p>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full p-3 bg-gray-600 rounded text-white placeholder-gray-400">
+                        <input type="email" placeholder="Your Email" class="w-full p-3 bg-gray-600 rounded text-white placeholder-gray-400">
+                        <textarea placeholder="Your Message" rows="4" class="w-full p-3 bg-gray-600 rounded text-white placeholder-gray-400"></textarea>
+                        <button type="button" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Data Analyst Portfolio. Combining analytics with soccer passion.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            alert('Mobile menu would expand here in a full implementation!');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white', 'shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97f4fd61a7defd90',t:'MTc1NzkwNjQ0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
