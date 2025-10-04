@@ -745,7 +745,7 @@
                     <div class="experience-header">
                         <div>
                             <h3 class="experience-title">Data Management Associate</h3>
-                            <p class="experience-company">Current Position</p>
+                            <p class="experience-company">DHL Express</p>
                         </div>
                         <span class="experience-period">2023 - Present</span>
                     </div>
@@ -754,10 +754,10 @@
                 <div class="experience-card">
                     <div class="experience-header">
                         <div>
-                            <h3 class="experience-title">Data Processing Specialist</h3>
-                            <p class="experience-company">Previous Role</p>
+                            <h3 class="experience-title">Lab Analyst</h3>
+                            <p class="experience-company">SGS</p>
                         </div>
-                        <span class="experience-period">2021 - 2023</span>
+                        <span class="experience-period">2023</span>
                     </div>
                     <p class="experience-description">Specialized in extracting, cleaning, and organizing large datasets for analysis and reporting purposes.</p>
                 </div>
@@ -772,26 +772,19 @@
             <div class="section-divider"></div>
             <p class="contact-text">Ready to bring precision and reliability to your data management needs? Let's connect and discuss how I can contribute to your team.</p>
             <div class="contact-grid">
-                <a href="mailto:iman.rahman@email.com" class="contact-card">
+                <a href="mailto:noriman886@gmail.com" class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <p class="contact-label">Email</p>
-                    <p class="contact-value">iman.rahman@email.com</p>
-                </a>
-                <a href="tel:+15551234567" class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <p class="contact-label">Phone</p>
-                    <p class="contact-value">+1 (555) 123-4567</p>
+                    <p class="contact-value">noriman886@gmail.com</p>
                 </a>
                 <a href="#" class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <p class="contact-label">Location</p>
-                    <p class="contact-value">Available for remote work</p>
+                    <p class="contact-value">Kuala Lumpur</p>
                 </a>
             </div>
         </div>
@@ -804,7 +797,7 @@
 
     <script>
         // Smooth scrolling and active section detection
-        let currentActive = 'home';
+        let Active = 'home';
         
         function setActiveSection() {
             const sections = ['home', 'about', 'skills', 'experience', 'contact'];
@@ -815,7 +808,7 @@
                 if (element) {
                     const { offsetTop, offsetHeight } = element;
                     if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-                        if (currentActive !== section) {
+                        if (Active !== section) {
                             // Update navigation
                             document.querySelectorAll('.nav-link, .mobile-menu-link').forEach(link => {
                                 link.classList.remove('active');
@@ -823,7 +816,7 @@
                                     link.classList.add('active');
                                 }
                             });
-                            currentActive = section;
+                            Active = section;
                         }
                         break;
                     }
@@ -875,3 +868,4 @@
     </script>
 </body>
 </html>
+
