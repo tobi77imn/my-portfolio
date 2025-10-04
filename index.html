@@ -386,61 +386,77 @@
             color: #cbd5e1;
         }
         
-        /* Skills Section */
-        .skills-section {
+        /* Projects Section */
+        .projects-section {
             background: rgba(0, 0, 0, 0.1);
         }
         
-        .skills-grid {
+        .projects-grid {
             display: grid;
             gap: 2rem;
         }
         
         @media (min-width: 768px) {
-            .skills-grid {
+            .projects-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
         
-        .skill-card {
+        .project-card {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(30, 58, 138, 0.2));
             padding: 1.5rem;
             border-radius: 0.75rem;
             border: 1px solid rgba(34, 211, 238, 0.13);
+            transition: all 0.3s ease;
         }
         
-        .skill-header {
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(34, 211, 238, 0.25);
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.15);
+        }
+        
+        .project-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 0.75rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
         }
         
-        .skill-name {
+        .project-title {
             font-size: 1.25rem;
             font-weight: 600;
             color: #22d3ee;
+            margin-bottom: 0.5rem;
         }
         
-        .skill-level {
-            font-weight: 700;
+        .project-category {
+            background: rgba(34, 211, 238, 0.2);
             color: #22d3ee;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
         }
         
-        .skill-bar {
-            width: 100%;
-            height: 12px;
-            background: rgba(100, 116, 139, 0.3);
-            border-radius: 6px;
-            overflow: hidden;
+        .project-description {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 1rem;
         }
         
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #22d3ee, #38bdf8);
-            border-radius: 6px;
-            width: 0;
-            transition: width 1s ease-in-out;
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .project-skill {
+            background: rgba(100, 116, 139, 0.2);
+            color: #94a3b8;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
         }
         
         /* Experience Section */
@@ -514,16 +530,16 @@
         }
         
         .contact-grid {
-    display: grid;
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-@media (min-width: 768px) {
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+            display: grid;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        @media (min-width: 768px) {
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         
         .contact-card {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.3), rgba(30, 58, 138, 0.2));
@@ -600,7 +616,7 @@
             <div class="nav-links" id="navLinks">
                 <div class="nav-link active" data-section="home">home</div>
                 <div class="nav-link" data-section="about">about</div>
-                <div class="nav-link" data-section="skills">skills</div>
+                <div class="nav-link" data-section="projects">projects</div>
                 <div class="nav-link" data-section="experience">experience</div>
                 <div class="nav-link" data-section="contact">contact</div>
             </div>
@@ -614,7 +630,7 @@
             <div class="mobile-menu-links">
                 <div class="mobile-menu-link active" data-section="home">home</div>
                 <div class="mobile-menu-link" data-section="about">about</div>
-                <div class="mobile-menu-link" data-section="skills">skills</div>
+                <div class="mobile-menu-link" data-section="projects">projects</div>
                 <div class="mobile-menu-link" data-section="experience">experience</div>
                 <div class="mobile-menu-link" data-section="contact">contact</div>
             </div>
@@ -680,55 +696,58 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
         <div class="section-container">
-            <h2 class="section-title">Core Skills</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="section-divider"></div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Attention to Detail</span>
-                        <span class="skill-level">95%</span>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Data Quality Assurance Dashboard</h3>
+                        <span class="project-category">Data Management</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Microsoft Excel</span>
-                        <span class="skill-level">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90"></div>
+                    <p class="project-description">Developed a comprehensive dashboard to monitor data quality metrics across multiple systems, reducing data errors by 45% and improving reporting accuracy.</p>
+                    <div class="project-skills">
+                        <span class="project-skill">Excel</span>
+                        <span class="project-skill">Data Validation</span>
+                        <span class="project-skill">Dashboard Design</span>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Data Extraction</span>
-                        <span class="skill-level">85%</span>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Automated Data Entry System</h3>
+                        <span class="project-category">Process Automation</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Data Cleaning</span>
-                        <span class="skill-level">88%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="88"></div>
+                    <p class="project-description">Created an automated workflow that streamlined data entry processes, reducing manual input time by 60% while maintaining 99.9% accuracy.</p>
+                    <div class="project-skills">
+                        <span class="project-skill">Excel Macros</span>
+                        <span class="project-skill">Data Cleaning</span>
+                        <span class="project-skill">Process Optimization</span>
                     </div>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-header">
-                        <span class="skill-name">Data Entry</span>
-                        <span class="skill-level">92%</span>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Customer Database Migration</h3>
+                        <span class="project-category">Data Migration</span>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="92"></div>
+                    <p class="project-description">Led the migration of 50,000+ customer records to a new CRM system, ensuring zero data loss and maintaining complete data integrity throughout the process.</p>
+                    <div class="project-skills">
+                        <span class="project-skill">Data Extraction</span>
+                        <span class="project-skill">Data Cleaning</span>
+                        <span class="project-skill">Quality Assurance</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Inventory Management Analytics</h3>
+                        <span class="project-category">Data Analysis</span>
+                    </div>
+                    <p class="project-description">Built analytical models to optimize inventory levels, resulting in 25% reduction in excess stock and improved supply chain efficiency.</p>
+                    <div class="project-skills">
+                        <span class="project-skill">Excel</span>
+                        <span class="project-skill">Data Analysis</span>
+                        <span class="project-skill">Reporting</span>
                     </div>
                 </div>
             </div>
@@ -800,7 +819,7 @@
         let Active = 'home';
         
         function setActiveSection() {
-            const sections = ['home', 'about', 'skills', 'experience', 'contact'];
+            const sections = ['home', 'about', 'projects', 'experience', 'contact'];
             const scrollPosition = window.scrollY + 100;
             
             for (const section of sections) {
@@ -846,20 +865,8 @@
             document.getElementById('mobileMenu').classList.toggle('active');
         });
         
-        // Initialize skill bars
-        function initSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.getAttribute('data-width');
-                bar.style.width = width + '%';
-            });
-        }
-        
         // Handle scroll events
         window.addEventListener('scroll', setActiveSection);
-        window.addEventListener('load', () => {
-            setTimeout(initSkillBars, 500);
-        });
         
         // Initialize on load
         document.addEventListener('DOMContentLoaded', () => {
@@ -868,5 +875,3 @@
     </script>
 </body>
 </html>
-
-
