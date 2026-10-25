@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iman Rahman - Data Management Associate</title>
-    <meta name="description" content="Iman Rahman is a Data Management Associate in Kuala Lumpur specializing in precision data handling, extraction, and cleaning.">
+    <title>Iman Rahman - Trade Analyst</title>
+    <meta name="description" content="Iman Rahman is a Trade Analyst in Kuala Lumpur with a background in data management, specializing in precision data handling, extraction, and cleaning.">
     <link rel="canonical" href="https://imanrahman.com/">
 
     <!-- Link previews (LinkedIn, WhatsApp, X) -->
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://imanrahman.com/">
-    <meta property="og:title" content="Iman Rahman - Data Management Associate">
+    <meta property="og:title" content="Iman Rahman - Trade Analyst">
     <meta property="og:description" content="Precision data handling, extraction, and cleaning. Based in Kuala Lumpur.">
     <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#0f172a">
@@ -20,11 +20,11 @@
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Iman Rahman",
-        "jobTitle": "Data Management Associate",
+        "jobTitle": "Trade Analyst",
         "url": "https://imanrahman.com",
         "email": "mailto:noriman886@gmail.com",
         "address": { "@type": "PostalAddress", "addressLocality": "Kuala Lumpur", "addressCountry": "MY" },
-        "worksFor": { "@type": "Organization", "name": "DHL Express" },
+        "worksFor": { "@type": "Organization", "name": "Tradewin" },
         "sameAs": ["https://github.com/tobi77imn"]
     }
     </script>
@@ -1635,7 +1635,7 @@
                         <span class="name-glow-2" aria-hidden="true"></span>
                     </span>
                 </h1>
-                <p class="hero-role">Data Management Associate</p>
+                <p class="hero-role">Trade Analyst</p>
                 <p class="hero-role" aria-hidden="true">
                     <span class="typed" id="typed">Data cleaning</span>
                 </p>
@@ -1662,7 +1662,7 @@
         <section id="stats" class="tight" aria-label="At a glance">
             <div class="stats reveal">
                 <div class="stat">
-                    <div class="stat-num gradient-text" data-count="2">2</div>
+                    <div class="stat-num gradient-text" data-count="3">3</div>
                     <div class="stat-label">Companies</div>
                 </div>
                 <div class="stat">
@@ -1687,7 +1687,7 @@
                 <div class="section-divider"></div>
                 <div class="about-content reveal">
                     <div class="about-text">
-                        <p>As a dedicated Data Management Associate, I bring precision and reliability to every data project I handle. My expertise lies in transforming raw, complex datasets into clean, organized, and actionable information.</p>
+                        <p>As a Trade Analyst with a background in data management, I bring precision and reliability to every data project I handle. My expertise lies in transforming raw, complex datasets into clean, organized, and actionable information.</p>
                         <p>With a keen eye for detail and extensive experience in Microsoft Excel, I ensure data integrity and accuracy across all operations. My methodical approach to data extraction and cleaning processes has consistently delivered high-quality results for my employers.</p>
                     </div>
                     <div class="about-attributes">
@@ -1716,13 +1716,30 @@
 
                 <ol class="timeline">
                     <li class="timeline-item reveal">
+                        <article class="experience-card filterable" data-skills="">
+                            <div class="experience-header">
+                                <div>
+                                    <h3 class="experience-title">Trade Analyst</h3>
+                                    <p class="experience-company">Tradewin</p>
+                                </div>
+                                <span class="experience-period">Jul 2026 - Present <span class="badge-current">Current</span></span>
+                            </div>
+                            <!-- Add a one-line summary and 3-4 achievements here, plus skills in data-skills above, e.g.
+                            <p class="experience-description">...</p>
+                            <ul class="experience-points">
+                                <li>...</li>
+                            </ul> -->
+                            <ul class="tag-list" data-tags></ul>
+                        </article>
+                    </li>
+                    <li class="timeline-item reveal">
                         <article class="experience-card filterable" data-skills="Data Integrity,Data Management,Multi-system Data">
                             <div class="experience-header">
                                 <div>
                                     <h3 class="experience-title">Data Management Associate</h3>
                                     <p class="experience-company">DHL Express</p>
                                 </div>
-                                <span class="experience-period">2023 - Present <span class="badge-current">Current</span></span>
+                                <span class="experience-period">2023 - 2026</span>
                             </div>
                             <p class="experience-description">Managing and maintaining data integrity across multiple systems, ensuring accuracy and consistency in all data operations.</p>
                             <!-- Add 3-4 achievements with numbers here, e.g.
@@ -1873,7 +1890,7 @@
         <div class="qv-head">
             <div>
                 <h2 class="qv-name gradient-text" id="qvTitle">Iman Rahman</h2>
-                <p class="qv-sub">Data Management Associate · Kuala Lumpur</p>
+                <p class="qv-sub">Trade Analyst · Kuala Lumpur</p>
             </div>
             <button type="button" class="icon-btn" data-action="close-dialog" aria-label="Close">
                 <i class="fas fa-xmark" aria-hidden="true"></i>
@@ -1882,7 +1899,8 @@
         <div class="qv-section">
             <h3>Experience</h3>
             <ul>
-                <li><strong>Data Management Associate</strong>, DHL Express · 2023 - Present</li>
+                <li><strong>Trade Analyst</strong>, Tradewin · Jul 2026 - Present</li>
+                <li><strong>Data Management Associate</strong>, DHL Express · 2023 - 2026</li>
                 <li><strong>Lab Analyst</strong>, SGS · 2023</li>
             </ul>
         </div>
@@ -2061,7 +2079,7 @@
         const filterables = [...document.querySelectorAll('.filterable')];
         const allSkills = [];
         filterables.forEach(item => {
-            const skills = item.dataset.skills.split(',').map(s => s.trim());
+            const skills = item.dataset.skills.split(',').map(s => s.trim()).filter(Boolean);
             const list = item.querySelector('[data-tags]');
             skills.forEach(skill => {
                 if (!allSkills.includes(skill)) allSkills.push(skill);
