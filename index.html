@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iman Rahman - Trade Analyst</title>
-    <meta name="description" content="Iman Rahman is a Trade Analyst in Kuala Lumpur with a background in data management, specializing in precision data handling, extraction, and cleaning.">
+    <meta name="description" content="Iman Rahman is a Trade Analyst in Kuala Lumpur specializing in trade compliance, HS code classification, and customs data validation, with a background in data management.">
     <link rel="canonical" href="https://imanrahman.com/">
 
     <!-- Link previews (LinkedIn, WhatsApp, X) -->
     <meta property="og:type" content="profile">
     <meta property="og:url" content="https://imanrahman.com/">
     <meta property="og:title" content="Iman Rahman - Trade Analyst">
-    <meta property="og:description" content="Precision data handling, extraction, and cleaning. Based in Kuala Lumpur.">
+    <meta property="og:description" content="Trade Analyst at Tradewin (an Expeditors company). Trade compliance, HS classification, and customs data. Based in Kuala Lumpur.">
     <meta name="twitter:card" content="summary">
     <meta name="theme-color" content="#0f172a">
 
@@ -25,7 +25,9 @@
         "email": "mailto:noriman886@gmail.com",
         "address": { "@type": "PostalAddress", "addressLocality": "Kuala Lumpur", "addressCountry": "MY" },
         "worksFor": { "@type": "Organization", "name": "Tradewin" },
-        "sameAs": ["https://github.com/tobi77imn"]
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universiti Malaysia Pahang" },
+        "knowsLanguage": ["Malay", "English", "Mandarin", "French"],
+        "sameAs": ["https://www.linkedin.com/in/mni00/", "https://github.com/tobi77imn"]
     }
     </script>
 
@@ -843,6 +845,90 @@
             margin-bottom: 0.4rem;
         }
 
+        .experience-location {
+            color: var(--subtle);
+            font-size: 0.9rem;
+        }
+
+        /* Skills & education */
+        .bg-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .bg-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .info-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 1.75rem;
+        }
+
+        .info-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 1.1rem;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list > li {
+            margin-bottom: 1rem;
+        }
+
+        .info-list > li:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.25rem 1rem;
+        }
+
+        .info-row strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .info-meta {
+            color: var(--subtle);
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .info-sub {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .skill-group {
+            margin-bottom: 1.1rem;
+        }
+
+        .skill-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-group h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--subtle);
+            margin-bottom: 0.45rem;
+        }
+
         /* Projects Section */
         .projects-grid {
             display: grid;
@@ -1507,6 +1593,7 @@
             }
 
             .about-content,
+            .bg-grid,
             .contact-grid,
             .projects-grid {
                 display: block;
@@ -1518,6 +1605,7 @@
             }
 
             .about-attributes,
+            .info-card,
             .experience-card,
             .project-card,
             .contact-card,
@@ -1594,6 +1682,7 @@
                 <li><a class="nav-link active" href="#home" data-section="home">home</a></li>
                 <li><a class="nav-link" href="#about" data-section="about">about</a></li>
                 <li><a class="nav-link" href="#experience" data-section="experience">experience</a></li>
+                <li><a class="nav-link" href="#skills" data-section="skills">skills</a></li>
                 <li><a class="nav-link" href="#projects" data-section="projects">projects</a></li>
                 <li><a class="nav-link" href="#demo" data-section="demo">demo</a></li>
                 <li><a class="nav-link" href="#contact" data-section="contact">contact</a></li>
@@ -1615,6 +1704,7 @@
                 <li><a class="mobile-menu-link active" href="#home" data-section="home">home</a></li>
                 <li><a class="mobile-menu-link" href="#about" data-section="about">about</a></li>
                 <li><a class="mobile-menu-link" href="#experience" data-section="experience">experience</a></li>
+                <li><a class="mobile-menu-link" href="#skills" data-section="skills">skills</a></li>
                 <li><a class="mobile-menu-link" href="#projects" data-section="projects">projects</a></li>
                 <li><a class="mobile-menu-link" href="#demo" data-section="demo">demo</a></li>
                 <li><a class="mobile-menu-link" href="#contact" data-section="contact">contact</a></li>
@@ -1637,19 +1727,17 @@
                 </h1>
                 <p class="hero-role">Trade Analyst</p>
                 <p class="hero-role" aria-hidden="true">
-                    <span class="typed" id="typed">Data cleaning</span>
+                    <span class="typed" id="typed">Trade compliance</span>
                 </p>
-                <p class="hero-summary">Specializing in precision data handling, extraction, and cleaning with meticulous attention to detail.</p>
-                <p class="print-only">noriman886@gmail.com · Kuala Lumpur · imanrahman.com · github.com/tobi77imn</p>
+                <p class="hero-summary">Reviewing trade data, HS classifications, and customs compliance with a focus on accuracy, regulatory detail, and efficient workflows.</p>
+                <p class="print-only">noriman886@gmail.com · Kuala Lumpur · imanrahman.com · linkedin.com/in/mni00</p>
                 <div class="btn-group no-print">
                     <a href="#contact" class="btn btn-primary">
                         <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
                     </a>
-                    <!-- To offer a ready-made PDF instead, upload it (e.g. cv.pdf) and replace this button with:
-                         <a href="cv.pdf" download class="btn btn-secondary">...</a> -->
-                    <button type="button" class="btn btn-secondary" data-action="print">
+                    <a href="Iman_Rahman_Resume.pdf" download class="btn btn-secondary" data-track="cv-download">
                         <i class="fas fa-download" aria-hidden="true"></i> Download CV
-                    </button>
+                    </a>
                 </div>
             </div>
             <a class="scroll-down no-print" href="#stats" aria-label="Scroll down">
@@ -1657,25 +1745,24 @@
             </a>
         </section>
 
-        <!-- At-a-glance numbers. Add real impact metrics as more .stat blocks, e.g.
-             <div class="stat"><div class="stat-num gradient-text" data-count="50000" data-suffix="+">0</div><div class="stat-label">Records cleaned / month</div></div> -->
+        <!-- At-a-glance numbers. Add more as .stat blocks; data-count makes the number count up. -->
         <section id="stats" class="tight" aria-label="At a glance">
             <div class="stats reveal">
                 <div class="stat">
                     <div class="stat-num gradient-text" data-count="3">3</div>
-                    <div class="stat-label">Companies</div>
+                    <div class="stat-label">Companies in trade, logistics &amp; testing</div>
                 </div>
                 <div class="stat">
                     <div class="stat-num gradient-text">2023</div>
-                    <div class="stat-label">Working in data since</div>
-                </div>
-                <div class="stat" id="repoStat" hidden>
-                    <div class="stat-num gradient-text" id="repoCount">0</div>
-                    <div class="stat-label">Public GitHub repos</div>
+                    <div class="stat-label">Working with data since</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-num gradient-text">KL</div>
-                    <div class="stat-label">Kuala Lumpur, Malaysia</div>
+                    <div class="stat-num gradient-text" data-count="5">5</div>
+                    <div class="stat-label">Certificates</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num gradient-text" data-count="4">4</div>
+                    <div class="stat-label">Languages</div>
                 </div>
             </div>
         </section>
@@ -1687,16 +1774,16 @@
                 <div class="section-divider"></div>
                 <div class="about-content reveal">
                     <div class="about-text">
-                        <p>As a Trade Analyst with a background in data management, I bring precision and reliability to every data project I handle. My expertise lies in transforming raw, complex datasets into clean, organized, and actionable information.</p>
-                        <p>With a keen eye for detail and extensive experience in Microsoft Excel, I ensure data integrity and accuracy across all operations. My methodical approach to data extraction and cleaning processes has consistently delivered high-quality results for my employers.</p>
+                        <p>I'm a Trade Analyst at Tradewin (an Expeditors company), where I review transaction-level trade data and HS classifications for accuracy and regulatory compliance across Malaysian and Singapore requirements.</p>
+                        <p>Before that, I spent nearly three years at DHL handling customs clearance data, cleansing and classifying dutiable materials across multiple countries. My degree in Industrial Chemistry gave me a grounding in statistics and precise measurement, and I work mainly in Excel, Tableau, and SQL to keep data accurate and workflows efficient.</p>
                     </div>
                     <div class="about-attributes">
                         <h3 class="attributes-title">Key Attributes</h3>
                         <ul class="attribute-list">
                             <li class="attribute-item"><span class="attribute-dot" aria-hidden="true"></span>Meticulous attention to detail</li>
-                            <li class="attribute-item"><span class="attribute-dot" aria-hidden="true"></span>Strong analytical thinking</li>
+                            <li class="attribute-item"><span class="attribute-dot" aria-hidden="true"></span>Compliance-focused and audit-ready</li>
                             <li class="attribute-item"><span class="attribute-dot" aria-hidden="true"></span>Process optimization mindset</li>
-                            <li class="attribute-item"><span class="attribute-dot" aria-hidden="true"></span>Reliable and consistent work ethic</li>
+                            <li class="attribute-item"><span class="attribute-dot" aria-hidden="true"></span>Reliable, proactive, and consistent</li>
                         </ul>
                     </div>
                 </div>
@@ -1716,49 +1803,57 @@
 
                 <ol class="timeline">
                     <li class="timeline-item reveal">
-                        <article class="experience-card filterable" data-skills="">
+                        <article class="experience-card filterable" data-skills="Trade Compliance,HS Code Classification,FTA &amp; Rules of Origin,Reporting">
                             <div class="experience-header">
                                 <div>
                                     <h3 class="experience-title">Trade Analyst</h3>
-                                    <p class="experience-company">Tradewin</p>
+                                    <p class="experience-company">Tradewin (an Expeditors company)</p>
+                                    <p class="experience-location">Kelana Jaya, Selangor</p>
                                 </div>
                                 <span class="experience-period">Jul 2026 - Present <span class="badge-current">Current</span></span>
                             </div>
-                            <!-- Add a one-line summary and 3-4 achievements here, plus skills in data-skills above, e.g.
-                            <p class="experience-description">...</p>
                             <ul class="experience-points">
-                                <li>...</li>
-                            </ul> -->
+                                <li>Review transaction-level trade data and HS classifications for accuracy, completeness, and regulatory compliance across Malaysian and Singapore requirements, escalating discrepancies in line with defined protocols.</li>
+                                <li>Analyse LMW/GPB licensing requirements and FTA rules-of-origin eligibility for client trade flows, advising on compliance obligations and duty treatment under Malaysian customs regulations.</li>
+                                <li>Screen imports against Competent Authority requirements and compile findings into client assessment reports and the monthly Trade Bulletin (ASEAN section).</li>
+                            </ul>
                             <ul class="tag-list" data-tags></ul>
                         </article>
                     </li>
                     <li class="timeline-item reveal">
-                        <article class="experience-card filterable" data-skills="Data Integrity,Data Management,Multi-system Data">
+                        <article class="experience-card filterable" data-skills="HS Code Classification,Customs Data Validation,Trade Compliance,Data Cleaning,Process Improvement">
                             <div class="experience-header">
                                 <div>
                                     <h3 class="experience-title">Data Management Associate</h3>
-                                    <p class="experience-company">DHL Express</p>
+                                    <p class="experience-company">DHL APSSC Sdn. Bhd</p>
+                                    <p class="experience-location">Petaling Jaya, Selangor</p>
                                 </div>
-                                <span class="experience-period">2023 - 2026</span>
+                                <span class="experience-period">Oct 2023 - Jun 2026</span>
                             </div>
-                            <p class="experience-description">Managing and maintaining data integrity across multiple systems, ensuring accuracy and consistency in all data operations.</p>
-                            <!-- Add 3-4 achievements with numbers here, e.g.
                             <ul class="experience-points">
-                                <li>Reconciled ~X records per month across N systems, reducing mismatches by Y%</li>
-                            </ul> -->
+                                <li>Spearheaded inbound cleansing and classification of dutiable materials and HS codes across multiple countries, ensuring customs compliance and timely clearance aligned with international declaration standards.</li>
+                                <li>Supported trade compliance risk assessments by validating customs documentation, identifying discrepancies, and ensuring adherence to global SOPs and regulatory frameworks.</li>
+                                <li>Improved the transparency and efficiency of customs data capture for invoicing, customer tracking, and risk mitigation, reducing errors and keeping records audit-ready.</li>
+                                <li>Collaborated with cross-country lanes to standardize processes, resolve compliance issues, and streamline customs workflows.</li>
+                            </ul>
                             <ul class="tag-list" data-tags></ul>
                         </article>
                     </li>
                     <li class="timeline-item reveal">
-                        <article class="experience-card filterable" data-skills="Data Extraction,Data Cleaning,Reporting">
+                        <article class="experience-card filterable" data-skills="Microsoft Excel,Pivot Tables,Reporting">
                             <div class="experience-header">
                                 <div>
-                                    <h3 class="experience-title">Lab Analyst</h3>
-                                    <p class="experience-company">SGS</p>
+                                    <h3 class="experience-title">Lab Analyst Intern</h3>
+                                    <p class="experience-company">SGS (Malaysia) Sdn. Bhd</p>
+                                    <p class="experience-location">Shah Alam, Selangor</p>
                                 </div>
-                                <span class="experience-period">2023</span>
+                                <span class="experience-period">Mar 2023 - Aug 2023</span>
                             </div>
-                            <p class="experience-description">Specialized in extracting, cleaning, and organizing large datasets for analysis and reporting purposes.</p>
+                            <ul class="experience-points">
+                                <li>Recorded and managed experimental data in Excel, including pre-weigh and post-weight measurements, ensuring accuracy and consistency.</li>
+                                <li>Used pivot tables and advanced formulas to perform precise calculations and analyze lab results.</li>
+                                <li>Integrated data from lab instruments into Excel for comprehensive analysis, streamlining workflows and enabling actionable insights.</li>
+                            </ul>
                             <ul class="tag-list" data-tags></ul>
                         </article>
                     </li>
@@ -1766,8 +1861,114 @@
             </div>
         </section>
 
+        <!-- Skills, education, certificates, leadership -->
+        <section id="skills" class="band">
+            <div class="section-container">
+                <h2 class="section-title gradient-text">Skills &amp; Education</h2>
+                <div class="section-divider"></div>
+                <div class="bg-grid">
+                    <div class="info-card reveal">
+                        <h3><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Skills</h3>
+                        <div class="skill-group">
+                            <h4>Customs &amp; trade compliance</h4>
+                            <ul class="tag-list">
+                                <li class="skill-tag">HS Code Classification</li>
+                                <li class="skill-tag">Customs Data Validation</li>
+                                <li class="skill-tag">International Trade Regulations</li>
+                                <li class="skill-tag">Documentation Compliance</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Software</h4>
+                            <ul class="tag-list">
+                                <li class="skill-tag">Excel</li>
+                                <li class="skill-tag">Tableau</li>
+                                <li class="skill-tag">Word</li>
+                                <li class="skill-tag">PowerPoint</li>
+                                <li class="skill-tag">Canva</li>
+                                <li class="skill-tag">Premiere Pro</li>
+                                <li class="skill-tag">Illustrator</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Programming</h4>
+                            <ul class="tag-list">
+                                <li class="skill-tag">SQL</li>
+                                <li class="skill-tag">C</li>
+                                <li class="skill-tag">C++</li>
+                            </ul>
+                        </div>
+                        <div class="skill-group">
+                            <h4>Languages</h4>
+                            <ul class="tag-list">
+                                <li class="skill-tag">Malay (Native)</li>
+                                <li class="skill-tag">English (Fluent, C2)</li>
+                                <li class="skill-tag">Mandarin (Beginner)</li>
+                                <li class="skill-tag">French (Beginner)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card reveal">
+                        <h3><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+                        <ul class="info-list">
+                            <li>
+                                <div class="info-row"><strong>Universiti Malaysia Pahang</strong><span class="info-meta">Sep 2019 - Aug 2023</span></div>
+                                <p class="info-sub">Bachelor of Industrial Chemistry</p>
+                                <p class="info-sub">Relevant modules: Applied Statistics, Applied Calculus, Computer Programming</p>
+                            </li>
+                            <li>
+                                <div class="info-row"><strong>Universiti Teknologi Malaysia</strong><span class="info-meta">Mar 2018 - Jul 2019</span></div>
+                                <p class="info-sub">Engineering Foundation</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card reveal">
+                        <h3><i class="fas fa-certificate" aria-hidden="true"></i> Certificates</h3>
+                        <ul class="info-list">
+                            <li>
+                                <div class="info-row"><strong>Statistical Methods for Chemists</strong><span class="info-meta">Dec 2023</span></div>
+                                <p class="info-sub">Malaysia Institute of Chemistry</p>
+                            </li>
+                            <li>
+                                <div class="info-row"><strong>Data Visualization with Power BI</strong><span class="info-meta">Jul 2023</span></div>
+                                <p class="info-sub">Great Learning</p>
+                            </li>
+                            <li>
+                                <div class="info-row"><strong>Introduction to Data Analysis using Microsoft Excel</strong><span class="info-meta">Jul 2022</span></div>
+                                <p class="info-sub">Coursera</p>
+                            </li>
+                            <li>
+                                <div class="info-row"><strong>Introduction to Microsoft Excel</strong><span class="info-meta">Jul 2022</span></div>
+                                <p class="info-sub">Coursera</p>
+                            </li>
+                            <li>
+                                <div class="info-row"><strong>EF SET English Certificate (C2 Proficient)</strong><span class="info-meta">May 2021</span></div>
+                                <p class="info-sub">EF Standard English Test</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card reveal">
+                        <h3><i class="fas fa-users" aria-hidden="true"></i> Leadership</h3>
+                        <ul class="info-list">
+                            <li>
+                                <div class="info-row"><strong>Social Media Manager, DHL APSSC</strong><span class="info-meta">Oct 2023 - Jan 2026</span></div>
+                                <p class="info-sub">Created and managed content on SmartConnect highlighting team achievements and activities, boosting internal visibility and promoting participation in events.</p>
+                            </li>
+                            <li>
+                                <div class="info-row"><strong>House Captain, Jeli Science School</strong><span class="info-meta">Jan 2017 - Nov 2017</span></div>
+                                <p class="info-sub">Led house meetings and coordinated participation in inter-house sports, cultural, and academic competitions.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Projects Section -->
-        <section id="projects" class="band">
+        <section id="projects">
             <div class="section-container">
                 <h2 class="section-title gradient-text">Featured Projects</h2>
                 <div class="section-divider"></div>
@@ -1782,7 +1983,7 @@
                         <ul class="tag-list" data-tags></ul>
                         <span class="project-link">View on GitHub <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
                     </a>
-                    <a class="project-card filterable reveal" href="#demo" data-skills="Data Cleaning,Data Integrity,Web Development">
+                    <a class="project-card filterable reveal" href="#demo" data-skills="Data Cleaning,Customs Data Validation,Web Development">
                         <div class="project-header">
                             <h3 class="project-title">Interactive Data Cleaning Demo</h3>
                             <span class="project-category">On this site</span>
@@ -1802,11 +2003,11 @@
         </section>
 
         <!-- Data cleaning demo -->
-        <section id="demo">
+        <section id="demo" class="band">
             <div class="section-container">
                 <h2 class="section-title gradient-text">See How I Clean Data</h2>
                 <div class="section-divider"></div>
-                <p class="section-intro">Below is a messy sample of shipment records (made-up data). Press <strong>Clean data</strong> to watch each fix happen and the quality score climb.</p>
+                <p class="section-intro">Below is a messy sample of shipment records with HS codes (made-up data). Press <strong>Clean data</strong> to watch each fix happen and the quality score climb.</p>
 
                 <div class="demo reveal">
                     <div class="demo-top">
@@ -1845,11 +2046,11 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="band">
+        <section id="contact">
             <div class="section-container">
                 <h2 class="section-title gradient-text">Get In Touch</h2>
                 <div class="section-divider"></div>
-                <p class="contact-text">Ready to bring precision and reliability to your data management needs? Let's connect and discuss how I can contribute to your team.</p>
+                <p class="contact-text">Looking for someone precise with trade compliance and customs data? Let's connect and discuss how I can contribute to your team.</p>
                 <div class="contact-grid reveal">
                     <a href="mailto:noriman886@gmail.com" class="contact-card" data-track="email-click">
                         <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
@@ -1861,20 +2062,20 @@
                         <p class="contact-label">GitHub</p>
                         <p class="contact-value">github.com/tobi77imn</p>
                     </a>
-                    <!-- Add LinkedIn by copying the GitHub card above with your profile URL and the "fab fa-linkedin" icon -->
-                    <div class="contact-card">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-                        <p class="contact-label">Location</p>
-                        <p class="contact-value">Kuala Lumpur, Malaysia</p>
-                    </div>
+                    <a href="https://www.linkedin.com/in/mni00/" target="_blank" rel="noopener" class="contact-card" data-track="linkedin-click">
+                        <div class="contact-icon"><i class="fab fa-linkedin-in" aria-hidden="true"></i></div>
+                        <p class="contact-label">LinkedIn</p>
+                        <p class="contact-value">linkedin.com/in/mni00</p>
+                    </a>
                 </div>
-                <div class="btn-group no-print" style="margin-top: 2.5rem;">
+                <p class="contact-text" style="margin-top: 2rem; font-size: 1rem;"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Based in Kuala Lumpur, Malaysia</p>
+                <div class="btn-group no-print" style="margin-top: 1.5rem;">
                     <button type="button" class="btn btn-primary" data-action="copy-email">
                         <i class="fas fa-copy" aria-hidden="true"></i> Copy email address
                     </button>
-                    <button type="button" class="btn btn-secondary" data-action="print">
+                    <a href="Iman_Rahman_Resume.pdf" download class="btn btn-secondary" data-track="cv-download">
                         <i class="fas fa-download" aria-hidden="true"></i> Download CV
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -1899,26 +2100,37 @@
         <div class="qv-section">
             <h3>Experience</h3>
             <ul>
-                <li><strong>Trade Analyst</strong>, Tradewin · Jul 2026 - Present</li>
-                <li><strong>Data Management Associate</strong>, DHL Express · 2023 - 2026</li>
-                <li><strong>Lab Analyst</strong>, SGS · 2023</li>
+                <li><strong>Trade Analyst</strong>, Tradewin (an Expeditors company) · Jul 2026 - Present</li>
+                <li><strong>Data Management Associate</strong>, DHL APSSC · Oct 2023 - Jun 2026</li>
+                <li><strong>Lab Analyst Intern</strong>, SGS Malaysia · Mar - Aug 2023</li>
             </ul>
         </div>
         <div class="qv-section">
             <h3>Strengths</h3>
             <ul>
-                <li>Data cleaning, extraction, and integrity across multiple systems</li>
-                <li>Extensive Microsoft Excel experience</li>
-                <li>Meticulous attention to detail; process optimization mindset</li>
+                <li>HS classification and customs data across Malaysia, Singapore, and multi-country lanes</li>
+                <li>FTA rules of origin, LMW/GPB licensing, and compliance reporting</li>
+                <li>B.Sc. Industrial Chemistry, Universiti Malaysia Pahang</li>
+                <li>Malay (native), English (C2)</li>
             </ul>
         </div>
         <div class="qv-section">
             <h3>Skills</h3>
-            <ul class="tag-list" id="qvSkills"></ul>
+            <ul class="tag-list">
+                <li class="skill-tag">HS Code Classification</li>
+                <li class="skill-tag">Customs Data Validation</li>
+                <li class="skill-tag">Trade Compliance</li>
+                <li class="skill-tag">Excel</li>
+                <li class="skill-tag">Tableau</li>
+                <li class="skill-tag">SQL</li>
+            </ul>
         </div>
         <div class="qv-actions">
             <a href="mailto:noriman886@gmail.com" class="btn btn-primary btn-sm" data-track="email-click"><i class="fas fa-envelope" aria-hidden="true"></i> Email me</a>
-            <button type="button" class="btn btn-secondary btn-sm" data-action="print"><i class="fas fa-download" aria-hidden="true"></i> Download CV</button>
+            <a href="https://www.linkedin.com/in/mni00/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm" data-track="linkedin-click"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
+            <a href="Iman_Rahman_Resume.pdf" download class="btn btn-secondary btn-sm" data-track="cv-download">
+                <i class="fas fa-download" aria-hidden="true"></i> Download CV
+            </a>
         </div>
     </dialog>
 
@@ -2010,7 +2222,7 @@
 
         // Rotating focus areas in the hero
         const typedEl = document.getElementById('typed');
-        const phrases = ['Data cleaning', 'Data extraction', 'Data integrity', 'Microsoft Excel'];
+        const phrases = ['Trade compliance', 'HS code classification', 'Customs data validation', 'Excel · Tableau · SQL'];
         if (!reduceMotion) {
             let phrase = 0;
             let chars = phrases[0].length;
@@ -2125,15 +2337,6 @@
             if (skill) track('filter-' + skill.toLowerCase().replace(/\s+/g, '-'));
         }
 
-        // Quick view skills mirror the filter list
-        const qvSkills = document.getElementById('qvSkills');
-        ['Microsoft Excel', ...allSkills].forEach(skill => {
-            const tag = document.createElement('li');
-            tag.className = 'skill-tag';
-            tag.textContent = skill;
-            qvSkills.appendChild(tag);
-        });
-
         // Quick view dialog
         const quickView = document.getElementById('quickView');
         document.getElementById('quickViewBtn').addEventListener('click', () => {
@@ -2149,12 +2352,7 @@
             const actionEl = e.target.closest('[data-action]');
             if (actionEl) {
                 const action = actionEl.dataset.action;
-                if (action === 'print') {
-                    track('cv-download');
-                    if (quickView.open) quickView.close();
-                    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-                    window.print();
-                } else if (action === 'copy-email') {
+                if (action === 'copy-email') {
                     copyEmail();
                 } else if (action === 'close-dialog') {
                     quickView.close();
@@ -2189,17 +2387,16 @@
             }
         }
 
+        window.addEventListener('beforeprint', () => {
+            document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+        });
+
         // Live GitHub repos
         async function loadRepos() {
             try {
                 const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=100`);
                 if (!res.ok) return;
                 const repos = (await res.json()).filter(repo => !repo.fork);
-
-                const countEl = document.getElementById('repoCount');
-                countEl.dataset.count = repos.length;
-                document.getElementById('repoStat').hidden = false;
-                countUp(countEl);
 
                 const grid = document.getElementById('repoGrid');
                 repos.slice(0, 6).forEach(repo => {
@@ -2241,19 +2438,20 @@
             { key: 'id', label: 'Shipment ID' },
             { key: 'customer', label: 'Customer' },
             { key: 'city', label: 'City' },
+            { key: 'hs', label: 'HS code' },
             { key: 'date', label: 'Ship date' },
             { key: 'weight', label: 'Weight' }
         ];
 
         const RAW_ROWS = [
-            { id: 'SHP-1001', customer: '  aisyah tan', city: 'kuala lumpur', date: '2024/03/05', weight: '12 kg' },
-            { id: 'SHP-1002', customer: 'Ravi Kumar ', city: 'PETALING JAYA', date: '05-03-2024', weight: '8.5' },
-            { id: 'SHP-1003', customer: 'Mei Ling Wong', city: 'Shah Alam', date: '6 Mar 2024', weight: '3.20 KG' },
-            { id: 'SHP-1001', customer: 'Aisyah Tan', city: 'Kuala Lumpur ', date: '2024-03-05', weight: '12' },
-            { id: 'SHP-1004', customer: 'JOHN  LEE', city: 'kuala  lumpur', date: '07/03/2024', weight: '21.4kg' },
-            { id: 'SHP-1005', customer: 'Farah Aziz', city: '', date: '2024-03-08', weight: '15.75kg' },
-            { id: 'SHP-1006', customer: 'daniel ong', city: 'Penang', date: 'March 9, 2024', weight: ' 4 ' },
-            { id: 'SHP-1002', customer: 'ravi kumar', city: 'Petaling Jaya', date: '2024-03-05', weight: '8.50 kg' }
+            { id: 'SHP-1001', customer: '  aisyah tan', city: 'kuala lumpur', hs: '847130', date: '2024/03/05', weight: '12 kg' },
+            { id: 'SHP-1002', customer: 'Ravi Kumar ', city: 'PETALING JAYA', hs: '8517.62', date: '05-03-2024', weight: '8.5' },
+            { id: 'SHP-1003', customer: 'Mei Ling Wong', city: 'Shah Alam', hs: '3004 90', date: '6 Mar 2024', weight: '3.20 KG' },
+            { id: 'SHP-1001', customer: 'Aisyah Tan', city: 'Kuala Lumpur ', hs: '8471.30.00', date: '2024-03-05', weight: '12' },
+            { id: 'SHP-1004', customer: 'JOHN  LEE', city: 'kuala  lumpur', hs: '9018.90', date: '07/03/2024', weight: '21.4kg' },
+            { id: 'SHP-1005', customer: 'Farah Aziz', city: '', hs: '3926.90', date: '2024-03-08', weight: '15.75kg' },
+            { id: 'SHP-1006', customer: 'daniel ong', city: 'Penang', hs: '85 44 42', date: 'March 9, 2024', weight: ' 4 ' },
+            { id: 'SHP-1002', customer: 'ravi kumar', city: 'Petaling Jaya', hs: '851762', date: '2024-03-05', weight: '8.50 kg' }
         ];
 
         const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
@@ -2277,13 +2475,22 @@
         const STEPS = [
             {
                 name: 'Trim whitespace',
-                run: rows => editCells(rows, ['id', 'customer', 'city', 'date', 'weight'], squash),
+                run: rows => editCells(rows, ['id', 'customer', 'city', 'hs', 'date', 'weight'], squash),
                 log: n => `Trimmed stray and doubled spaces in ${n} cells`
             },
             {
                 name: 'Standardize casing',
                 run: rows => editCells(rows, ['customer', 'city'], titleCase),
                 log: n => `Standardized name and city casing in ${n} cells`
+            },
+            {
+                name: 'Format HS codes',
+                run: rows => editCells(rows, ['hs'], v => {
+                    // Keep the 6-digit international subheading, formatted as 0000.00
+                    const digits = v.replace(/\D/g, '').slice(0, 6);
+                    return digits.length === 6 ? `${digits.slice(0, 4)}.${digits.slice(4)}` : v;
+                }),
+                log: n => `Standardized ${n} HS codes to the 6-digit 0000.00 format`
             },
             {
                 name: 'Normalize dates',
@@ -2337,6 +2544,7 @@
             id: v => /^SHP-\d{4}$/.test(v),
             customer: v => v !== '' && v === titleCase(squash(v)),
             city: v => v !== '' && v === titleCase(squash(v)),
+            hs: v => /^\d{4}\.\d{2}$/.test(v),
             date: v => /^\d{4}-\d{2}-\d{2}$/.test(v),
             weight: v => /^\d+\.\d{2}$/.test(v)
         };
