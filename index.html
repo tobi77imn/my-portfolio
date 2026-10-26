@@ -22,7 +22,6 @@
         "name": "Iman Rahman",
         "jobTitle": "Trade Analyst",
         "url": "https://imanrahman.com",
-        "email": "mailto:noriman886@gmail.com",
         "address": { "@type": "PostalAddress", "addressLocality": "Kuala Lumpur", "addressCountry": "MY" },
         "worksFor": { "@type": "Organization", "name": "Tradewin" },
         "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universiti Malaysia Pahang" },
@@ -2297,7 +2296,7 @@
                     </h1>
                     <p class="hero-lede">I make trade data <mark>accurate</mark>, <mark>compliant</mark>, and <em>easy to trust</em>.</p>
                     <p class="hero-sub">Trade Analyst with a background in customs data management: HS classification, FTA rules of origin, and clean, audit-ready records across Malaysia, Singapore, and beyond.</p>
-                    <p class="print-only">noriman886@gmail.com · Kuala Lumpur · imanrahman.com · linkedin.com/in/mni00</p>
+                    <p class="print-only"><span data-email-text>Email via LinkedIn</span> · Kuala Lumpur · imanrahman.com · linkedin.com/in/mni00</p>
                     <div class="hero-actions no-print">
                         <a href="#contact" class="btn btn-accent">
                             Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -2730,7 +2729,7 @@
                     <h2 class="contact-title">Let's <em>talk.</em></h2>
                     <p class="contact-text">Looking for someone precise with trade compliance and customs data? I'd love to hear how I can contribute to your team.</p>
                     <div class="email-row">
-                        <a class="email-link" href="mailto:noriman886@gmail.com" data-track="email-click">noriman886@gmail.com</a>
+                        <a class="email-link" href="https://www.linkedin.com/in/mni00/" data-email-link data-email-text data-track="email-click">Message me on LinkedIn</a>
                         <button type="button" class="btn btn-sm copy-btn no-print" data-action="copy-email">
                             <i class="fas fa-copy" aria-hidden="true"></i> Copy
                         </button>
@@ -2793,7 +2792,7 @@
             </ul>
         </div>
         <div class="qv-actions">
-            <a href="mailto:noriman886@gmail.com" class="btn btn-accent btn-sm" data-track="email-click"><i class="fas fa-envelope" aria-hidden="true"></i> Email me</a>
+            <a href="https://www.linkedin.com/in/mni00/" class="btn btn-accent btn-sm" data-email-link data-track="email-click"><i class="fas fa-envelope" aria-hidden="true"></i> Email me</a>
             <a href="https://www.linkedin.com/in/mni00/" target="_blank" rel="noopener" class="btn btn-ghost btn-sm" data-track="linkedin-click"><i class="fab fa-linkedin-in" aria-hidden="true"></i> LinkedIn</a>
         </div>
     </dialog>
@@ -2801,7 +2800,17 @@
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script>
-        const EMAIL = 'noriman886@gmail.com';
+        // The email address is stored encoded and filled in by script, so it never
+        // appears as plain text in the page source where spam bots harvest it.
+        // Without JavaScript, the email links fall back to LinkedIn.
+        const EMAIL = atob('bm9yaW1hbjg4NkBnbWFpbC5jb20=');
+        document.querySelectorAll('[data-email-link]').forEach(el => {
+            el.href = 'mailto:' + EMAIL;
+            el.removeAttribute('target');
+        });
+        document.querySelectorAll('[data-email-text]').forEach(el => {
+            el.textContent = EMAIL;
+        });
         const GITHUB_USER = 'tobi77imn';
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
