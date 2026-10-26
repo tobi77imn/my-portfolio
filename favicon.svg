@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #141b2d; }
+    .fg { fill: #f7f2e8; }
+    @media (prefers-color-scheme: dark) { .bg { fill: #f7f2e8; } .fg { fill: #141b2d; } }
+  </style>
+  <circle class="bg" cx="32" cy="32" r="32"/>
+  <g class="fg" transform="translate(17.29 41.84) scale(0.01467 -0.01467)"><path transform="translate(0,0)" d="M464 100 631 74 618 0H-20L-7 74L169 100L370 1241L203 1268L216 1341H855L842 1268L665 1241Z"/><path transform="translate(737,0)" d="M552 568 469 100 636 73 624 0H-3L9 73L173 100L374 1242L207 1268L220 1341H755Q1017 1341 1143.0 1258.0Q1269 1175 1269 1003Q1269 847 1184.5 743.0Q1100 639 940 596L1141 100L1288 73L1276 0H876L668 568ZM626 678Q790 678 883.0 759.5Q976 841 976 987Q976 1117 915.5 1174.0Q855 1231 738 1231H669L571 678Z"/></g>
+  <circle cx="50" cy="46" r="4.5" fill="#ff5b24"/>
+</svg>
